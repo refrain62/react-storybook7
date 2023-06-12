@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { within, userEvent } from "@storybook/testing-library";
+
 import Button from './Button';
 
 const meta = {
@@ -110,3 +112,20 @@ export const Danger2: Story = {
         color: 'danger',
     },
 };
+
+// play functon
+export const DangerPlayFunction: Story = {
+    play: async ({ canvasElement }) => {
+      console.log('canvasElement', canvasElement);
+      const canvas = within(canvasElement);
+      console.log('canvas', canvas);
+      const button = await canvas.getByRole('button');
+      console.log('button', button);
+      await userEvent.click(button);
+    },
+    args: {
+      children: 'Danger',
+      color: 'danger',
+      handleClick: () => alert('click'),
+    },
+  };
