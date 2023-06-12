@@ -5,6 +5,8 @@ import Button from './Button';
 const meta = {
     title: 'Common/Button',
     component: Button,
+    // Story のコンポーネントに対してのドキュメントを自動作成してくれる機能
+    tags: ['autodocs'],
 } satisfies Meta<typeof Button>;
 
 export default meta;

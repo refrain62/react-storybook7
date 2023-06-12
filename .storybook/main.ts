@@ -16,6 +16,7 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {
+    // Story のコンポーネントに対してのドキュメントを自動作成してくれる機能
     autodocs: "tag",
   },
 };
