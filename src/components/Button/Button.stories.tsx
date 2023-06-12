@@ -15,6 +15,9 @@ const meta = {
         size: {
             options: ['sm', 'base', 'lg'],
             control: { type: 'select' },
+        },
+        handleClick: {
+            action: 'clicked',
         }
     }
 } satisfies Meta<typeof Button>;

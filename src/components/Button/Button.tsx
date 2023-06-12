@@ -6,17 +6,17 @@ type Props = {
     color?: 'default' | 'primary' | 'danger',
     // size?: string,
     size?: 'base' | 'sm' | 'lg',
-    onClick?: () => void,
+    handleClick?: () => void,
 };
 
 function Button({
     children,
     color = 'default',
     size = 'base',
-    onClick = () => console.log('click'),
+    handleClick = () => console.log('click'),
     }: Props) {
     return (
-        <button className={`${color} ${size}`} onClick={onClick}>
+        <button className={`${color} ${size}`} onClick={handleClick}>
             {children}
         </button>
     );
