@@ -6,6 +6,14 @@ const meta = {
     title: 'UserItem',
     component: UserItem,
     tags: ['autodocs'],
+    // loaders の設定を meta の中で行うこともできる
+    loaders: [
+        async () => ({
+            user: await (
+                await fetch('https://jsonplaceholder.typicode.com/users/2')
+            ).json(),
+        }),
+    ],
 } satisfies Meta<typeof UserItem>;
 
 export default meta;
@@ -32,3 +40,11 @@ export const FetchData: Story = {
         <UserItem {...args} id={user.id} name={user.name} />
     ),
 };
+
+// metaでデータ取得
+export const FetchData2: Story = {
+    render: (args, { loaded: { user } }) => (
+        <UserItem {...args} id={user.id} name={user.name} />
+    ),
+};
+
