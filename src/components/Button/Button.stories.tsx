@@ -86,3 +86,12 @@ export const PrimaryLarge2: Story = {
         </Button>
     ),
 };
+
+// Args+render 関数
+export const Danger2: Story = {
+    render: (args) => <Button {...args}>{args.children}</Button>,
+    args: {
+        children: 'Danger',
+        color: 'danger',
+    },
+};
