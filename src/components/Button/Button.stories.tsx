@@ -65,6 +65,7 @@ export const Danger: Story = {
     args: {
         children: 'Danger',
         color: 'danger',
+        handleClick: () => alert('click'),
     }
 };
 
