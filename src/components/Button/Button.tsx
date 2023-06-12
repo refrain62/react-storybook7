@@ -1,3 +1,5 @@
+import './button.css'
+
 type Props = {
     children: React.ReactNode,
 };
