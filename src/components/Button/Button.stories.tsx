@@ -32,3 +32,24 @@ export const ClickButton: Story = {
         children: 'click',
     },
 };
+
+// ボタンの色の定義を追加
+export const Default: Story = {
+    args: {
+        children: 'Default',
+    }
+};
+
+export const Primary: Story = {
+    args: {
+        children: 'Primary',
+        color: 'primary',
+    }
+};
+
+export const Danger: Story = {
+    args: {
+        children: 'Danger',
+        color: 'danger',
+    }
+};

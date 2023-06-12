@@ -11,3 +11,11 @@ button {
 .default {
     background-color: #6c757d;
 }
+
+.primary {
+    background-color: #007bff;
+}
+
+.danger {
+    background-color: #dc3545;
+}
