@@ -56,16 +56,16 @@ export const Danger: Story = {
 
 export const PrimarySmall: Story = {
     args: {
-        children: 'Primary',
-        color: 'primary',
+        // Primaryのargsの再利用
+        ...Primary.args,
         size: 'sm',
     }
 };
 
 export const PrimaryLarge: Story = {
     args: {
-        children: 'Primary',
-        color: 'primary',
+        // Primaryのargsの再利用
+        ...Primary.args,
         size: 'lg',
     }
 };
