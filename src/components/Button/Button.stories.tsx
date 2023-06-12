@@ -7,6 +7,16 @@ const meta = {
     component: Button,
     // Story のコンポーネントに対してのドキュメントを自動作成してくれる機能
     tags: ['autodocs'],
+    argTypes: {
+        color: {
+            options: ['primary', 'default', 'danger'],
+            control: { type: 'radio' },
+        },
+        size: {
+            options: ['sm', 'base', 'lg'],
+            control: { type: 'select' },
+        }
+    }
 } satisfies Meta<typeof Button>;
 
 export default meta;
