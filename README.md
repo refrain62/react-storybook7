@@ -30,3 +30,5 @@ npm run storybook
 ```
  コマンドを実行するとブラウザが自動起動してWelcomeページが表示される
 
+※設定ファイルの main.ts を更新した場合は Storybook を再起動する必要があるので npm run storybook を再実行してください。
+

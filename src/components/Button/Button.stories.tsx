@@ -22,3 +22,11 @@ export const HelloButton: Story = {
 export const HelloButton2: Story = {
     render: () => <Button>Hello World2</Button>,
 };
+
+// ストーリーの追加は meta のtitleに設定した内容がサイドバーに表示される。
+// ボタンに表示される文字を変えたい場合はストリーを追加する。
+export const ClickButton: Story = {
+    args: {
+        children: 'click',
+    },
+};
