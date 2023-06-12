@@ -17,5 +17,16 @@ Done. Now run:
   npm run dev
 ```
 
+# Storybook のインストール
+```
+% npx storybook@latest init
+OK to proceed? (y) y
 
+Would you like to install it? ... yes
+```
+
+```
+npm run storybook
+```
+ コマンドを実行するとブラウザが自動起動してWelcomeページが表示される
 
