@@ -53,3 +53,36 @@ export const Danger: Story = {
         color: 'danger',
     }
 };
+
+export const PrimarySmall: Story = {
+    args: {
+        children: 'Primary',
+        color: 'primary',
+        size: 'sm',
+    }
+};
+
+export const PrimaryLarge: Story = {
+    args: {
+        children: 'Primary',
+        color: 'primary',
+        size: 'lg',
+    }
+};
+
+// render も利用可能
+export const PrimarySmall2: Story = {
+    render: () => (
+        <Button color="primary" size="sm">
+            PrimarySmall2
+        </Button>
+    ),
+};
+
+export const PrimaryLarge2: Story = {
+    render: () => (
+        <Button color="primary" size="lg">
+            PrimaryLarge2
+        </Button>
+    ),
+};
