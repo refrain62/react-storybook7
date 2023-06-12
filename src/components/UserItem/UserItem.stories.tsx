@@ -18,3 +18,17 @@ export const Default: Story = {
         name: 'John Doe',
     },
 };
+
+// Loaders によるデータ取得
+export const FetchData: Story = {
+    loaders: [
+        async () => ({
+            user: await (
+                await fetch('https://jsonplaceholder.typicode.com/users/1')
+            ).json(),
+        }),
+    ],
+    render: (args, { loaded: { user } }) => (
+        <UserItem {...args} id={user.id} name={user.name} />
+    ),
+};
