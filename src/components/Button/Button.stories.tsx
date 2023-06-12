@@ -7,6 +7,7 @@ const meta = {
     component: Button,
     // Story のコンポーネントに対してのドキュメントを自動作成してくれる機能
     tags: ['autodocs'],
+    parameters: { actions: { argTypesRegex: '^handle[A-Z].*' } },
     argTypes: {
         color: {
             options: ['primary', 'default', 'danger'],
@@ -16,9 +17,9 @@ const meta = {
             options: ['sm', 'base', 'lg'],
             control: { type: 'select' },
         },
-        handleClick: {
-            action: 'clicked',
-        }
+        // handleClick: {
+        //     action: 'clicked',
+        // }
     }
 } satisfies Meta<typeof Button>;
 
