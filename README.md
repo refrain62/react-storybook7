@@ -56,3 +56,11 @@ test-runner を実行
 ```
  % npm run test-storybook
 ```
+
+verbose モード
+もう少し行われたテストの内容を確認したい場合にはオプションの--verbose を package.json で追加します。
+
+package.json
+```
+"test-storybook": "test-storybook --verbose"
+```
