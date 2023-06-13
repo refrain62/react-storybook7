@@ -32,3 +32,27 @@ npm run storybook
 
 ※設定ファイルの main.ts を更新した場合は Storybook を再起動する必要があるので npm run storybook を再実行してください。
 
+
+# @test-runner のインストールを行います。
+```
+% npm install @storybook/test-runner --save-dev
+```
+インストールが完了したら package.json ファイルの script に実行するためにコマンドを追加します。
+
+package.json
+```
+vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
+  },
+//略
+```
+
+test-runner を実行
+※test-runner を実行するためには Storybook を起動しておかなければなりません。起動していない場合は下記のエラーメッセージが表示されます。
+```
+ % npm run test-storybook
+```
