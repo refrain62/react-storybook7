@@ -51,16 +51,22 @@ vite build",
 //略
 ```
 
-test-runner を実行
+# test-runner を実行
 ※test-runner を実行するためには Storybook を起動しておかなければなりません。起動していない場合は下記のエラーメッセージが表示されます。
 ```
  % npm run test-storybook
 ```
 
-verbose モード
+# verbose モード
 もう少し行われたテストの内容を確認したい場合にはオプションの--verbose を package.json で追加します。
 
 package.json
 ```
 "test-storybook": "test-storybook --verbose"
 ```
+
+# watchAll モード
+--watchAll オプションをつけることでファイルの更新を検知して自動でテストを再実行してくれます。
+
+--watch オプションもありますが--watch を利用の場合には"--watch is not supported without git/hg, please use --watchAll"のメッセージが表示されるので watchAll を利用しています。
+
